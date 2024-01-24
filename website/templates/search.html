@@ -2,10 +2,14 @@
 {% block title %}Search{% endblock %}
 {% block content %} search
 
-  <form action="/search"  method="post">
+<form action="/search"  method="post">
+            <input type="text" id="summoner" name="summoner" required>
+            <select name="server">
+                <option disabled selected>Server</option>
+                <option value="EUNE">EUNE</option>
+                <option value="EUW">EUW</option>
+            </select>
+            <button type="submit">Search</button>
+</form>
 
-                <input type="text" id="search" name="search" required>
-                <input type="submit" value="search">
-
-  </form>
 {% endblock %}
